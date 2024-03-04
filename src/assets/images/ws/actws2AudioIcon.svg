@@ -1,0 +1,19 @@
+<svg width="117" height="53" viewBox="0 0 117 53" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <defs>
+        <path id="a3nbyo36wa" d="M0 0h34.5v34.5H0z"/>
+    </defs>
+    <g fill="none" fill-rule="evenodd">
+        <path d="M25.8 7h65.55c12.703 0 23 10.297 23 23s-10.297 23-23 23H25.8c-12.703 0-23-10.297-23-23s10.297-23 23-23z" fill="#68ACC3" fill-rule="nonzero"/>
+        <path d="M91.35 1.85a24.074 24.074 0 0 1 17.077 7.073A24.074 24.074 0 0 1 115.5 26a24.074 24.074 0 0 1-7.073 17.077A24.074 24.074 0 0 1 91.35 50.15H25.8a24.074 24.074 0 0 1-17.077-7.073A24.074 24.074 0 0 1 1.65 26 24.074 24.074 0 0 1 8.723 8.923 24.074 24.074 0 0 1 25.8 1.85h65.55z" stroke="#8CC6D9" stroke-width="2.3" fill="#E5FAFF" fill-rule="nonzero"/>
+        <g transform="translate(14.3 8.75)">
+            <mask id="duaxpgy2ib" fill="#fff">
+                <use xlink:href="#a3nbyo36wa"/>
+            </mask>
+            <path d="M34.5 17.25c0 9.527-7.723 17.25-17.25 17.25C7.723 34.5 0 26.777 0 17.25 0 7.723 7.723 0 17.25 0 26.777 0 34.5 7.723 34.5 17.25" fill="#181818" mask="url(#duaxpgy2ib)"/>
+        </g>
+        <path d="M25.39 18.646c0-1.681 1.196-2.37 2.66-1.528l12.26 7.045c1.463.841 1.463 2.217 0 3.058l-12.26 7.045c-1.464.841-2.66.153-2.66-1.528V18.646z" fill="#FFF"/>
+        <text font-family="Roboto-Bold, Roboto" font-size="20" font-weight="bold" letter-spacing=".045" fill="#181818" transform="translate(14.3 8.75)">
+                                    <tspan x="46" y="23.6">Play</tspan>
+                                </text>
+    </g>
+</svg>

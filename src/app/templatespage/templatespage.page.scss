@@ -1,0 +1,56 @@
+.bgstyle{
+    background: linear-gradient(to right, #d3fcf6 0%, #ebfefb 49%, #d3fcf6 100%);;
+    padding-top: 20px;
+    padding-bottom: 30px;
+}
+.radiobtn{
+   padding: 5%;
+   margin-left: auto;
+   margin-right: auto;
+}
+.rbtn{
+  
+    height: 40px;
+    width: 40px;
+    border-radius: 100%;
+    border: 2px solid #121010;
+    margin-left: 1px;
+    text-decoration: none;
+    display: block;
+    text-align: center;
+    font-size: larger;
+    padding: 6px;
+    background-color: red;
+}
+.hdr{
+    margin-left: 5%;
+    width: 90%;
+    margin-top: 20px;
+    font-size: large;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    text-align: center;
+}
+.opt{
+    text-align: center;
+    margin-top: 10px;
+    border: 2px solid black;
+    width: 80%;
+   margin-left: 10%;
+   padding: 15px;
+   border-radius: 10px;
+
+}
+.opt a{
+    text-decoration: none;
+}
+.qheading{
+    font-size: medium;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+}
+.btn{
+    text-align: center;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 20px;
+    margin-bottom:40px ;
+}

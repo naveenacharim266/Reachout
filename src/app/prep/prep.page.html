@@ -1,0 +1,225 @@
+<ion-menu contentId="main-content">
+  <ion-header>
+    <ion-toolbar>
+      <ion-title>Menu Content</ion-title>
+    </ion-toolbar>
+  </ion-header>
+  <ion-content class="ion-padding">This is the menu content.</ion-content>
+</ion-menu>
+  
+  <ion-toolbar class="tabstolbar" >
+  <div class="ion-page" id="main-content" >
+    <ion-header>
+      <ion-toolbar>
+        <ion-buttons slot="start">
+          <ion-menu-button></ion-menu-button>
+        </ion-buttons>
+        <!-- <ion-title>hello</ion-title> -->
+        <ion-img  src="../assets/images/logo.png" style="width: 30px; height: 30px;"></ion-img>
+        <ion-icon slot="end" src="../assets/images/circle-info-solid.svg" class="ho-ic" ></ion-icon>
+      </ion-toolbar>
+    </ion-header>
+  </div>
+
+  
+</ion-toolbar>
+
+
+<ion-content fullscreen="true">
+
+  <div class="bgstyle"  *ngIf="datas.qustion_type=='Opt'">
+  
+      <ion-row >
+        <ion-col class="colimg"><ion-img src="../../assets/images/509928574.gif" style="width:120px;"></ion-img></ion-col>
+      </ion-row>
+      
+        <ion-row class="rlbl col-sm-3">{{ datas.title }}</ion-row>
+        <ion-label class="qus_txt">{{ datas.subtitle }} </ion-label>
+     
+   
+    <ion-row  class="qus_txt">{{ datas.qustion_text }}</ion-row>
+
+    <ion-list class="lsa">
+      <ng-container *ngFor="let option of datas.options" >
+        <li class="lia"  [ngClass]="{'optactive': ansid === option.id }"  ><a class="lbla" (click)="redirect(option.nqid, 'next', datas.qustion_id, option.id)" >{{  option.option }}</a></li>
+      </ng-container>
+      <div class="classbtn">
+        <!-- <ng-container >
+          <button class="btn" *ngIf="datas.btntxt1!=null" >{{ datas.btntxt1 }}</button>
+        </ng-container> -->
+      </div>
+      
+      <div class="btnbk" *ngIf="datas.qustion_id!==0"><ion-button  (click)="backbtn()" >back</ion-button></div>
+      <ion-row class="qus_txt"><li >{{ datas.bottomtxt }}</li></ion-row>
+      </ion-list>
+  </div>
+
+<!-- content screen -->
+
+  <div class="bgstyle" *ngIf="datas.qustion_type=='Cont'">
+    <ion-img src="../../assets/images/Hello there!.png" ></ion-img>
+     <div class="cnthr">
+     <ion-row class="tit_txt" >{{ datas.title }}</ion-row>
+     <ion-row >{{ datas.subtitle }} </ion-row>
+   </div>
+     <ion-row  class="qus_txt">{{ datas.qustion_text }}</ion-row>
+     
+ 
+     <ion-list class="lsa">
+       
+       </ion-list>
+     <ion-list class="lscont" >
+       <ng-container *ngFor="let cont of datas.contxt" >
+         <ion-row class="lscontrowh"><li  >{{ cont.txth1 }}</li></ion-row>
+         <ion-row class="lscontrow"><li  >{{ cont.txth2 }}</li></ion-row>
+         <ion-row class="lscontrow"><li >{{ cont.txt1 }}</li></ion-row>
+         <ion-row class="lscontrow"><li  >{{ cont.txt2 }}</li></ion-row>
+         <ion-row class="lscontrow"><li  >{{ cont.txt3 }}</li></ion-row>
+         <ion-row class="lscontrow"><li  >{{ cont.txt4 }}</li></ion-row>
+         <ion-row class="lscontrow"><li  >{{ cont.txt5 }}</li></ion-row>
+         <ion-row class="lscontrow"><li  >{{ cont.txt6 }}</li></ion-row>
+         <ion-row class="lscontrowh"><li >{{ cont.txth3 }}</li></ion-row>
+       </ng-container>
+       </ion-list>
+ 
+     <ion-list class="lscont">
+       <ng-container *ngFor="let tag of datas.anchortag" >
+         <li  ><a  class="adec" *ngIf="datas.anchortag!=null" (click)="redirect(tag.anid, 'next', datas.qustion_id, tag.id)" >{{ tag.a }}</a>{{ tag.atext }}</li>
+       </ng-container>
+       <div class="classbtn">
+         <ng-container *ngFor="let ch of datas.choices" >
+           <ion-button  size="small" fill="outline" (click)="redirect(ch.cnid, 'next', datas.qustion_id, ch.id)">{{ ch.choice }}</ion-button>
+         </ng-container>
+       </div>
+       
+       <div class="btnbk"><ion-button (click)="backbtn()" >back</ion-button></div>
+       <ion-row class="qus_txt"><li >{{ datas.bottomtxt }}</li></ion-row>
+       </ion-list>
+   </div>
+ 
+ <!-- Feedback code -->
+  <div class="bgstyle" *ngIf="datas.qustion_id==12">
+    <div class="heading"><ion-label>Let Us Know</ion-label></div>
+   <ion-img class="imagedesign"  src="../../assets/images/letus.jpg" ></ion-img>
+    <div class="cnthr">
+    <ion-row class="tit_txt" >{{ datas.title }}</ion-row>
+    <ion-row >{{ datas.subtitle }} </ion-row>
+  </div>
+    <ion-row  class="qus_txt">{{ datas.qustion_text }}</ion-row>
+    
+ <ion-list class="lscont" >
+      <ng-container *ngFor="let cont of datas.contxt" >
+        <ion-row class="lscontrowh">
+          <li  >{{ cont.txth1 }}</li>
+          <div class="list-inline rating-list" 
+          *ngFor="let star of stars" style="display: inline-block" >
+            <li (click)="countStar(star)"
+                [ngClass]="{'selected': (star <= selectedValue)}">
+              <i class="fa fa-star"></i>
+            </li> 
+          </div> 
+        </ion-row>
+        <ion-row class="lscontrowh"><li >{{ cont.txth2 }}</li>
+        <div class="list-inline rating-list2" 
+          *ngFor="let star of stars" style="display: inline-block" >
+            <li (click)="countStar2(star)"
+                [ngClass]="{'selected': (star <= selectedValue2)}">
+              <i class="fa fa-star"></i>
+            </li> 
+          </div> 
+        </ion-row>
+        <ion-row class="lscontrow"><li  >{{ cont.txth3 }}</li></ion-row>
+      </ng-container>
+      <ion-textarea class="txtarea"></ion-textarea>
+      </ion-list> 
+
+    <ion-list class="lscont">
+      <ng-container *ngFor="let tag of datas.anchortag" >
+        <li  ><a  class="adec" *ngIf="datas.options!=null" (click)="redirect(tag.anid, 'next', datas.qustion_id, tag.id)" >{{ tag.a }}</a>{{ tag.atext }}</li>
+      </ng-container>
+      <div class="classbtn">
+        <ng-container *ngFor="let choices of datas.choices" >
+          <ion-button size="small" fill="outline" (click)="redirect(choices.cnid, 'next',  datas.qustion_id, choices.id)">{{ choices.choice }}</ion-button>
+        </ng-container>
+      </div>
+      
+      <div class="btnbk"><ion-button (click)="backbtn()" >back</ion-button></div>
+      <ion-row class="qus_txt"><li >{{ datas.bottomtxt }}</li></ion-row>
+      </ion-list>
+  </div>
+ 
+
+<!--  service provider screen -->
+  <div class="bgstyle" *ngIf="datas.qustion_id==14">
+    <div class="heading"><ion-label></ion-label></div>
+   <ion-img class="imagedesign"  src="../../assets/images/letus.jpg" ></ion-img>
+    <div class="cnthr">
+    <ion-row class="tit_txt" >{{ datas.title }}</ion-row>
+    <ion-row >{{ datas.subtitle }} </ion-row>
+  </div>
+    
+  <div class="qustbody">
+    <ion-label  class="qush_txt">{{ datas.qustion_text }}</ion-label>
+    
+    <ion-textarea class="txtarea"></ion-textarea>
+  </div>
+ <ion-list class="lscont" >
+      <ng-container *ngFor="let cont of datas.contxt" >
+        <ion-row class="lscontrowh">
+          <li  >{{ cont.txth1 }}</li>
+          <div class="classbtn">
+            <ng-container *ngFor="let choices of datas.choices" >
+              <ion-button *ngIf="choices.cid==2" size="small" fill="outline" (click)="redirect(choices.cnid, 'next',  datas.qustion_id, choices.id)">{{ choices.choice }}</ion-button>
+              <ion-button *ngIf="choices.cid==3" size="small" fill="outline" (click)="redirect(choices.cnid, 'next',  datas.qustion_id, choices.id)">{{ choices.choice }}</ion-button>
+            </ng-container>
+          </div>
+        </ion-row>
+        <ion-row class="lscontrowh">
+          <li class="folup" >{{ cont.txth2 }}</li>
+          <div class="classbtn">
+            <ng-container *ngFor="let choices of datas.choices" >
+              <ion-button *ngIf="choices.cid==1" size="small" fill="outline" (click)="redirect(choices.cnid, 'next',  datas.qustion_id, choices.id)">{{ choices.choice }}</ion-button>
+            </ng-container>
+          </div>
+        </ion-row>
+        <ion-row class="lscontrowh">
+          <li  >{{ cont.txth3 }}</li>
+          <div class="list-inline rating-list3" 
+          *ngFor="let star of stars" style="display: inline-block" >
+            <li (click)="countStar3(star)"
+                [ngClass]="{'selected': (star <= selectedValue3)}">
+              <i class="fa fa-star"></i>
+            </li> 
+          </div> 
+        </ion-row>
+      </ng-container>
+      </ion-list> 
+
+    <ion-list class="lscont">
+      <ng-container *ngFor="let tag of datas.anchortag" >
+        <li  ><a  class="adec" *ngIf="datas.options!=null" (click)="redirect(tag.anid, 'next',  datas.qustion_id, tag.id)" >{{ tag.a }}</a>{{ tag.atext }}</li>
+      </ng-container>
+      <div class="classbtn">
+        <ng-container *ngFor="let choices of datas.choices" >
+          <ion-button size="small" fill="outline" *ngIf="choices.cid==4" (click)="redirect(choices.cnid, 'next',  datas.qustion_id, choices.id)">{{ choices.choice }}</ion-button>
+        </ng-container>
+      </div>
+      
+      <div class="btnbk"><ion-button (click)="backbtn()">back</ion-button></div>
+      <ion-row class="qus_txt"><li >{{ datas.bottomtxt }}</li></ion-row>
+      </ion-list>
+  </div>
+
+  <!-- to view calender -->
+  <div class="bgstyle" *ngIf="datas.qustion_id==15">
+    <div class="cnthr">
+    <ion-row class="tit_txt" >{{ datas.title }}</ion-row>
+  </div>
+  <ion-datetime locale="en-GB" hourCycle="h12"></ion-datetime>
+
+    <ion-list class="lscont">
+      <div class="btnbk"><ion-button (click)="backbtn()"  >back</ion-button></div>
+      </ion-list>
+  </div>
+</ion-content>
+

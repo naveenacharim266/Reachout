@@ -1,0 +1,7 @@
+{
+  "name": "singlepage-prep",
+  "integrations": {
+    "capacitor": {}
+  },
+  "type": "angular"
+}

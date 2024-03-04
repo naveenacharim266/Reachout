@@ -1,0 +1,241 @@
+
+
+.tabstolbar{
+    display: flex; 
+    min-height: 65px;
+    min-width: 100%; 
+}
+.ion-page{
+    padding-bottom: 10px;
+}
+
+
+.ho-ic{
+    width: 30px;
+    height: 30px;
+    margin-right: 5px;
+    
+}
+.ho-ic:hover{
+  cursor: pointer;
+  
+}
+
+
+.contsc{
+    max-width: 80%;
+    height: 80%;
+    margin-left: 10px;
+    
+    }
+    
+    
+    .colimg{
+    max-width: 35%;
+    }
+    
+    .collbl{
+    max-width: 65%;
+    margin-top: 20px;
+    font-size: 15px;
+    font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+    }
+    
+    
+    .lia{
+       
+        margin-top: 10px;
+        border: 2px solid gray;
+        width: 80%;
+        margin-left: 10%;
+        text-align: center;
+       padding: 15px;
+        border-radius: 10px;
+        color: black;
+    
+    }
+    .lia:hover{
+        color: black;
+        background-color: aquamarine;
+        cursor: pointer;
+    }
+    a{
+        color: black;
+        text-decoration: none;
+       }
+    .bgstyle{
+        // background:linear-gradient(45deg, rgb(225, 193, 97), rgb(75, 220, 233));
+        height: 100%;
+      //  background-image: url('../../assets/images/509928574.gif');
+      //  background-size: 100% ;
+      //  background-repeat: repeat-x;
+    }
+    .cardtxt{
+        background: transparent;
+    }
+    .lsa{
+        margin-top: 0px;
+        background: transparent;
+       
+    }
+    .btnbk{
+        margin-top: 10px;
+        margin-right: auto;
+        margin-left: auto;
+        text-align: center;
+        size: small;
+        text-transform: none;
+    }
+    .qus_txt{
+        text-align: center;
+        max-width: 90%;
+        margin-left: 5%;
+        font-family: 'Playfair Display', serif;
+    }
+    .lscont{
+        width: 90%;
+        margin-left: 5%;
+        text-align:left;
+        font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+        text-transform: none;
+    }
+    .lscontrow{
+        margin-top: 5px;
+    }
+    .lscontrowh{
+        margin-top: 10px;
+        width: 90%;
+        text-align: center;
+        font-family:Cambria, Cochin, Georgia, Times, 'Times New Roman', serif ;
+    }
+    .classbtn{
+        text-align: center;
+       text-transform: none !important;
+    }
+    .classbtn ion-button{
+        text-transform: none;
+    }
+    .btn {
+    //  background-color: transparent;
+      height: 30px; 
+      width: 40px;
+      margin-top: 10px;
+      padding: 2px;
+      text-transform: none;
+    
+    }
+    .btn.hover{
+        background-color: lightskyblue;
+    }
+    .tit_txt{
+        padding-top: 30px;
+        padding-bottom: 5px;
+        font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+        font-size: larger;
+       
+    }
+    .cnthr{
+        width: 90%;
+        margin-right: auto;
+        margin-left: auto;
+        
+    }
+    .adec{
+        padding-right: 5px;
+        text-decoration: underline;
+        color: blue;
+    
+    }
+    .adec:hover{
+        cursor: pointer;
+    }
+    
+    .heading{
+        text-align: center;
+        padding-top: 10px;
+        font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        font-size: x-large;
+    }
+    .rating-list li {
+        float: right;
+        color: #ddd;
+        padding: 0px 11px;
+        text-align: center;
+      
+      }
+      
+      .rating-list li:hover,
+      .rating-list li:hover ~ li, .rating-list li.selected {
+        color: #ffd700;
+      }
+      
+      .rating-list {
+        display: inline-block;
+        list-style: none;
+      }
+  //2 fb stars
+      .rating-list2 li {
+        float: right;
+        color: #ddd;
+        padding: 0px 11px;
+        text-align: center;
+      
+      }
+      
+      .rating-list2 li:hover,
+      .rating-list2 li:hover ~ li, .rating-list2 li.selected {
+        color: #ffd700;
+      }
+      
+      .rating-list2 {
+        display: inline-block;
+        list-style: none;
+      }
+    
+      // Fbstar3
+      .rating-list3 li {
+        float: right;
+        color: #ddd;
+        padding: 0px 11px;
+        text-align: center;
+      
+      }
+      
+      .rating-list3 li:hover,
+      .rating-list3 li:hover ~ li, .rating-list3 li.selected {
+        color: #ffd700;
+      }
+      
+      .rating-list3 {
+        display: inline-block;
+        list-style: none;
+      }
+      .txtarea{
+        border: 1px solid black;
+        border-radius: 10px;
+      }
+      .qustbody{
+        width: 90%;
+        margin-left: 5%;
+        margin-top: 10px;
+      }
+      .qush_txt{
+        font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+        font-size: larger;
+      }
+      .folup{
+        padding-top: 7px;
+        padding-right:1px;
+      }
+      .disabled {
+        cursor: not-allowed;
+      }
+      .optactive{
+        background-color: gray;
+      }
+      .rlbl{
+        width: 90%;
+        margin-left: 5%;
+        font-size: larger;
+        font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+      }

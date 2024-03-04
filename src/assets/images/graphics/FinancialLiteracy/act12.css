@@ -1,0 +1,469 @@
+body,html{
+    margin: 0px;
+    height: 100vh;
+    overflow: hidden;
+    background-image: linear-gradient(to right, #9d88e0a6 0%, #d5cbf1 50%, #9d88e0a6 100%);
+}
+.modal-content {
+  background-image: linear-gradient(to right, #9d88e0a6 0%, #d5cbf1 50%, #9d88e0a6 100%);
+}
+.container-fluid{
+  max-width: 100%;
+  max-height: 677px;
+  height: 100vh;
+  width: 100%;
+}
+.h-100{
+  height: 100vh !important;
+}
+.col-*{
+  padding: 0px
+}
+#content{
+  padding: 0px 40px
+}
+h1{
+  font-family: San Francisco Display Semibold;
+  font-size: 30px;
+  margin: 40px 0px 28px 0px;
+}
+h3, label{
+  font-family: San Francisco Display Regular;
+}
+ul{
+  padding: 0px;
+  margin: 0px
+}
+li{
+  list-style-type: none;
+  font-size: 22px;
+  font-weight: 300;
+  font-style: normal;
+  font-stretch: normal;
+  line-height: 1.36;
+  letter-spacing: 0px;
+  color: #2f2f3c;
+  padding-bottom: 20px;
+}
+li.sub_heading:first-child {
+  font-family: San Francisco Display Regular;
+}
+li.points{
+  font-family: San Francisco Display Regular;
+}
+#content li:last-child { 
+  padding-bottom: 0px;
+}
+
+.grid-divider {
+    position: relative;
+    padding: 0;
+}
+.grid-divider>[class*='col-'] {
+    position: static;
+}
+.grid-divider>[class*='col-']:nth-child(n+2):before {
+    content: "";
+    border-left: 1px solid #979797;
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 50%;
+}
+.col-padding {
+    padding: 0 15px;
+}
+.qust_btn{
+  width: 295px;
+  height: 51px;
+  border-radius: 6px;
+  box-shadow: 0 5px 9px 0 rgba(0, 0, 0, 0.12), 0 2px 5px 0 rgba(0, 0, 0, 0.07);
+  background-color: #6bb5f6;
+  font-family: San Francisco Display Semibold;
+  font-size: 22px;
+  font-weight: 600;
+  font-style: normal;
+  font-stretch: normal;
+  line-height: normal;
+  letter-spacing: 0px;
+  color: #ffffff;
+  border-width: 0px;
+  margin: 40px;
+  cursor: pointer;
+}
+button:focus{
+  outline: 0px;
+}
+
+/*Question Modal Styles*/
+.modal #close_span{
+  position: absolute;
+  width: 60px;
+  height: 60px;
+  box-shadow: 0 0 6px 0 rgba(0, 0, 0, 0.11);
+  background-color: #d3c9f1;
+  border-radius: 50%;
+  right: -10px;
+  top: -14px;
+  cursor: pointer;
+  z-index: 1;
+}
+.modal #close_span i{
+  color: #222222;
+  display: flex;
+  justify-content: center;
+  margin-top: 24%;
+  font-size: 32px;
+}
+.modal .modal-body{
+  padding: 40px
+}
+.modal h3{
+  font-family: San Francisco Display Semibold;
+  font-size: 26px;
+  font-weight: 600;
+  font-style: normal;
+  font-stretch: normal;
+  line-height: normal;
+  letter-spacing: 0.1px;
+  color: #333333;
+  padding: 0px 15px;
+}
+.modal label{
+  font-family: San Francisco Display Regular;
+  font-size: 22px;
+  font-weight: normal;
+  font-style: normal;
+  font-stretch: normal;
+  line-height: normal;
+  letter-spacing: 0px;
+  color: #333333;
+}
+.modal #qust1_col{
+  margin: 20px 0px;
+}
+.modal #qust1_col .custom-control{
+  margin-bottom: 24px;
+}
+.modal #qust1_col .custom-control:last-child {
+    margin-bottom: 0px;
+}
+.modal_submit_btn{
+  width: 197px;
+  height: 51px;
+  border-radius: 6px;
+  background-color: #6bb5f6;
+  cursor: pointer;
+  border-width: 0px;
+  outline: 0px;
+  font-family: San Francisco Display Semibold;
+  font-size: 22px;
+  font-weight: 600;
+  font-style: normal;
+  font-stretch: normal;
+  line-height: normal;
+  letter-spacing: 0px;
+  color: #ffffff;
+}
+.custom-control-label::before{
+  background-color: #ffffff !important;
+  border: 1px solid #979797;
+}
+.custom-radio .custom-control-input:checked~.custom-control-label::after{
+  background-image: url("data:image/svg+xml;charset=utf8,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='-4 -4 8 8'%3E%3Ccircle r='3' fill='%236bb5f6'/%3E%3C/svg%3E");
+}
+.custom-control-label::after{
+  top: -0.26rem;
+  left: -2rem;
+  width: 2rem;
+  height: 2rem;
+}
+
+.score_page_body_bg{
+  padding: 20px 0px;
+}
+.card-title{
+  font-size: 32px;
+  font-weight: bold;
+  font-style: normal;
+  font-stretch: normal;
+  line-height: normal;
+  letter-spacing: 0.1px;
+  color: #222222;
+  margin-top: 14px;
+  font-family: "San Francisco Display Bold";
+}
+.card-text {
+  font-size: 24px;
+  font-weight: 500;
+  font-style: normal;
+  font-stretch: normal;
+  line-height: normal;
+  letter-spacing: 0.1px;
+  color: #222222;
+  margin-top: 17px;
+  font-family: "San Francisco Display Medium";
+}
+.card-text span#score_text{
+  font-family: "San Francisco Display Bold";
+}
+.cor_ans_btn{
+  width: 242px;
+  height: 51px;
+  border: 2px solid #6bb5f6;
+  border-radius: 6px;
+  background-color: #6bb5f6;
+  color: #ffffff;
+  font-size: 22px;
+  margin-top: 50px;
+  font-family: "San Francisco Display Semibold";
+  cursor: pointer;
+}
+.mt-32{
+  margin-top: 32px
+}
+.qust_blk_hide, .alert_blk{
+  display: none
+}
+.badge {
+    width: 280px;
+    height: 197px;
+}
+/** Score Section Styles */
+#score_section .card-title, #score_section .card-text{
+  font-size: 24px;
+}
+#score_section #card_message, #score_section .card-text{
+  font-family: "San Francisco Display Regular";
+  font-size: 20px
+}
+@media (max-width: 900px){
+  h1{
+    font-size: 20px;
+    margin: 5px 0px;
+  }
+  h3 {
+    font-size: 20px
+  }
+  li{
+    font-size: 18px;
+    padding-bottom: 10px;
+  }
+  #content{
+    padding: 0px 1rem
+  }
+  .qust_blk{
+    margin: 1rem 0px;
+  }
+  .custom-control {
+    margin: 1rem 0px;
+  }
+  .qust_btn{
+    width: 195px;
+    height: 40px;
+    font-size: 14px;
+    margin: 15px;
+  }
+  .modal h3{
+    font-size: 16px;
+  }
+  .modal label{
+    font-size: 14px;
+  }
+  .modal #qust1_col .custom-control{
+    margin-bottom: 10px;
+  }
+  .modal .modal-body{
+    padding: 20px;
+  }
+  .custom-control-label::before{
+    top: 0.1rem;
+  }
+  .custom-control-label::after{
+    top: -0.4rem;
+  }
+  
+  .mt-32 {
+    margin-top: -38px;
+  }
+}
+@media (max-width: 640px){
+  .col-6 {
+    -ms-flex: 0 0 100%;
+    flex: 0 0 100%;
+    max-width: 100%;
+  }
+  .qust_btn{
+          margin-bottom: 80px !important;
+  }
+  .modal_submit_btn{
+       margin-bottom: 60px !important;
+      
+  }
+
+  }
+  #qust_section h1:first-of-type {
+      font-size: 20px;
+      margin-bottom: 1.5rem;
+      font-family: 'San Francisco Display Bold';
+  }
+  #img_block{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    
+  }
+  .card_bg{
+      backgroud-colur: #cabeee !important
+  }
+  .pt-10{
+      padding-top:1rem !important;
+  }
+  body, html{
+    overflow-y: scroll !important;
+  }
+    /* custom scroll bar **/
+  /* !important is needed sometimes */
+  body::-webkit-scrollbar {
+      width: 5px !important;
+  }
+
+  /* Track */
+  body::-webkit-scrollbar-track {
+      -webkit-box-shadow: inset 0 0 6px rgba(0,0,0,0.3) !important;
+      -webkit-border-radius: 5px !important;
+      border-radius: 10px !important;
+  }
+
+  /* Handle */
+  body::-webkit-scrollbar-thumb {
+      -webkit-border-radius: 10px !important;
+      border-radius: 5px !important;
+      background: #fe8602 !important; 
+      -webkit-box-shadow: inset 0 0 6px #fe8602 !important;
+
+  }
+  body::-webkit-scrollbar-thumb:window-inactive {
+      background-color: #41617D !important;
+  }
+  .grid-divider>[class*='col-']:nth-child(n+2):before{
+    content: none;
+  }
+  .score_page_body .score_page_body_bg {
+       margin-bottom: 7rem !important;
+    }
+}
+
+/** Feedback styles **/
+
+.score_page_body .score_page_body_bg {
+   height: 200px;
+   margin-bottom: 10rem;
+}
+ .score_page_body .score_page_body_bg .badge {
+   width: 200px;
+   height: 150px;
+}
+ .score_page_body .score_page_body_bg img {
+   z-index: 1;
+}
+ .score_page_body .score_page_body_bg .scoreImgCircle {
+   width: 200px;
+   height: 200px;
+   background-color: #fff;
+   top: 0;
+   left: 0;
+   bottom: 0;
+   right: 0;
+   border-radius: 50%;
+   opacity: 45%;
+}
+ .score_page_body .scoreInfo {
+   border-radius: 10px;
+   background-color: #fff;
+   padding: 1rem;
+}
+ .score_page_body .scoreInfo .scoreCircle {
+   top: -3rem;
+   left: 50%;
+   -webkit-transform: translateX(-50%);
+   transform: translateX(-50%);
+   width: 90px;
+   height: 90px;
+   border-radius: 50%;
+}
+ .score_page_body .scoreInfo .scoreCircle #score_text {
+   border: solid 7px #29bb02;
+   border-radius: 50%;
+   padding: 0.5rem;
+   font-size: 26px;
+   font-family: 'San Francisco Display Bold';
+}
+ .score_page_body .scoreInfo .scoreCircle .gold {
+   border-color: #29bb02 !important;
+}
+ .score_page_body .scoreInfo .scoreCircle .sliver {
+   border-color: #ffc60d !important;
+}
+ .score_page_body .scoreInfo .scoreCircle .bronze {
+   border-color: #f34a39 !important;
+}
+ .score_page_body .scoreInfo .scoreInfoMsg {
+   background-color: #e7fdfa;
+   padding: 2rem 0rem 1rem 0rem;
+}
+ .score_page_body .scoreInfo .scoreInfoMsg p {
+   letter-spacing: 0.1px;
+   color: #2f2f3c;
+   margin-bottom: 20px;
+   font-family: "San Francisco Display Semibold";
+   font-size: 30px;
+}
+ .score_page_body .scoreInfo .scoreInfoMsg hr {
+   width: 85px;
+   margin-top: 0.5rem;
+   margin-bottom: 0.5rem;
+   border: 0;
+   border-top: 1px solid #d8d5dc;
+}
+ .score_page_body .scoreInfo .scoreInfoMsg .card-title {
+   font-size: 24px;
+   font-weight: bold;
+   letter-spacing: 0.1px;
+   color: #222;
+   margin-top: 14px;
+   font-family: "San Francisco Display Bold";
+}
+ .score_page_body .scoreInfo .scoreInfoMsg p.card-text {
+   font-family: "San Francisco Display Semibold";
+   font-size: 20px;
+}
+ .score_page_body .static_page_footer .cor_ans_btn {
+   width: 150px;
+   height: 48px;
+   border: 2px solid #6bb5f6;
+   border-radius: 6px;
+   background-color: #6bb5f6;
+   color: #fff;
+   font-size: 18px;
+   margin-top: 30px !important;
+   font-family: "San Francisco Display Bold";
+   cursor: pointer;
+}
+ .score_page_body .static_page_footer .mt-32 {
+   margin-top: 32px;
+}
+ .score_page_body .static_page_footer .try_again {
+   font-size: 22px;
+   font-weight: 600;
+   color: #6bb5f6;
+   font-family: "San Francisco Display Semibold";
+}
+.pt-0{
+    margin-top:2px;
+    padding-top:0px !important;
+}
+.static_page_footer{
+     margin-bottom: 90px !important;
+}
+    

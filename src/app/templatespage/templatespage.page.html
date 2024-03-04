@@ -1,0 +1,40 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-title>templatespage</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+
+<ion-content fullscreen="true">
+  <div class="bgstyle">
+  <ng-container *ngFor="let item of datas" >
+  <ng-container >
+    <div class="hdr"  >{{item.heading }}</div>
+    <div class="tit"></div>
+  </ng-container>
+
+<ng-container >
+  <div class="radiobtn">
+  <ion-row class="ion-justify-content-center">
+  <div  *ngFor="let opt of item.questions" >
+    <a  class="rbtn" href="#">
+      <span  >{{ opt.qustid }}</span>
+    </a>
+  </div>
+</ion-row>
+</div>
+</ng-container>
+
+<ng-container >
+  <h3 class="qheading">{{ qst.qusth }}</h3>
+  <div class="opt"  *ngFor="let op of qst.options">
+    <a   (click)="nextq(op.value)">{{ op.optname }}</a>
+  </div>
+</ng-container>
+<div class="btn">
+  <ion-button [hidden]="display" fill="outline" >Submit</ion-button>
+</div>
+
+</ng-container>
+</div>
+</ion-content>
